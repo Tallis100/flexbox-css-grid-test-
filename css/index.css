@@ -1,5 +1,132 @@
+:root {
+    --1color: #660033;
+    --2color: #E0E6FF;
+    --3color: #777B88;
+    --4color: #330033;
+}
+
 /* Basic Normalize */ 
 html, body {
-    background-color: aquamarine;
+    margin: 0; padding: 0;
     height: 100%;
 }
+
+/* CSS Grid */
+.container {
+    height: 100%;
+    display: grid;    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr 100px;
+    grid-template-areas: 
+/*  "h h h h h h h h h h h h" */
+    "n n n n n n n n n n n n"
+    "m m m m m m m m m m m m"
+    "f f f f f f f f f f f f"
+    ;
+}
+/* .container > header {
+    background-color: var(--1color);
+    grid-area: h;    
+} */ 
+.container > nav {
+    background-color: var(--1color);
+    grid-area: n;    
+} 
+.container > main {
+    background-color: var(--2color);
+    grid-area: m;    
+}
+.container > footer {
+    background-color: var(--4color);
+    grid-area: f;    
+}
+.main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: 
+    "ar ar ar ar ar ar ar ar ar as as as"
+    ;
+}
+.main-container > article {
+    background-color: var(--2color);
+    grid-area: ar;
+}
+.main-container > aside {
+    background-color: var(--3color);
+    grid-area: as;
+}
+
+/* Flexbox */
+nav {
+    
+}
+.flexnav {
+    margin: 0; padding: 0;
+    display: flex;
+    list-style: none;
+}
+.flexnav > li {
+    
+}
+.flexnav > li > a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+.home {
+    flex: 1;
+}
+.services {
+    flex: 1;
+}
+.contact {
+    flex: 1;
+}
+.about {
+    flex: 1;
+}
+
+/* Media Queries */
+@media (max-width:700px) {
+    .flexnav {
+        flex-direction: column;
+    }
+    .flexnav > li > a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    }
+    
+    .home {
+        flex: 1;
+    }
+    .services {
+        flex: 1;
+    }
+    .contact {
+        flex: 1;
+    }
+    .about {
+        flex: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
