@@ -46,7 +46,7 @@ html, body {
     grid-template-columns: ;
     grid-template-rows: ;
     grid-template-areas: 
-    "ar ar ar ar ar ar ar ar ar as as as"
+    "ar ar ar ar ar ar ar ar as as as as"
     ;
 }
 .main-container > article {
@@ -76,9 +76,19 @@ nav {
     text-decoration: none;
     color: white;
     font-family: sans-serif;
+    font-weight: 600;
+}
+.flexnav > li > a:hover {
+    background-color: aquamarine;
+    color: var(--1color);
 }
 .home {
     flex: 1;
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    */
 }
 .services {
     flex: 1;
@@ -91,29 +101,23 @@ nav {
 }
 
 /* Media Queries */
-@media (max-width:700px) {
+@media (max-width:768px) {
     .flexnav {
-        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
     }
-    .flexnav > li > a {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    color: white;
-    font-family: sans-serif;
+    .flexnav > li{
+        flex: 1 1 50%;
     }
-    
-    .home {
-        flex: 1;
-    }
-    .services {
-        flex: 1;
-    }
-    .contact {
-        flex: 1;
-    }
-    .about {
-        flex: 1;
+    .main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: 
+    "ar ar ar ar ar ar ar ar ar ar ar ar"
+    "as as as as as as as as as as as as"
+    ;
     }
 }
 
