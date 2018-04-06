@@ -66,6 +66,7 @@ nav {
     margin: 0; padding: 0;
     display: flex;
     list-style: none;
+    justify-content: flex-end;
 }
 .flexnav > li {
     
@@ -83,7 +84,7 @@ nav {
     color: var(--1color);
 }
 .home {
-    flex: 1;
+    flex: 0;
     /*
     flex-grow: 1;
     flex-shrink: 1;
@@ -91,13 +92,13 @@ nav {
     */
 }
 .services {
-    flex: 1;
+    flex: 0;
 }
 .contact {
-    flex: 1;
+    flex: 0;
 }
 .about {
-    flex: 1;
+    flex: 0;
 }
 
 /* Media Queries */
