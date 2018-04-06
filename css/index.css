@@ -43,7 +43,7 @@ html, body {
 .main-container {
     height: 100%;
     display: grid;
-    grid-template-columns: ;
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: ;
     grid-template-areas: 
     "ar ar ar ar ar ar ar ar as as as as"
@@ -58,10 +58,13 @@ html, body {
     grid-area: as;
 }
 
-/* Flexbox */
-nav {
-    
+/* Design CSS Grid */
+.container > nav {
+    box-shadow: 0px 0.5px 1px black;
+    z-index: 2;
 }
+
+/* Flexbox */
 .flexnav {
     margin: 0; padding: 0;
     display: flex;
@@ -100,6 +103,34 @@ nav {
 .about {
     flex: 0;
 }
+.logo {
+    margin-right: auto;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.flexnav .img-position {
+    width: 55px;
+    height: 47px;    
+}
+
+/* Text Contents Design */
+article, aside {    
+    color: white;
+    padding: 30px 30px;
+    font-family: sans-serif;
+}
+article {
+    color: var(--1color);
+}
+p {
+    
+}
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+a {
+    color: var(--4color);
+}
 
 /* Media Queries */
 @media (max-width:768px) {
@@ -108,17 +139,19 @@ nav {
         text-align: center;
     }
     .flexnav > li{
-        flex: 1 1 50%;
+        flex: 1 1 60%;
+    }
+    .flexnav img {
+        display: none;
     }
     .main-container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    grid-template-areas: 
-    "ar ar ar ar ar ar ar ar ar ar ar ar"
-    "as as as as as as as as as as as as"
-    ;
+        height: 100%;
+        display: grid;
+        grid-template-columns: ;
+        grid-template-rows: ;
+        grid-template-areas: 
+        "ar ar ar ar ar ar ar ar ar ar ar ar"
+        "as as as as as as as as as as as as";
     }
 }
 
