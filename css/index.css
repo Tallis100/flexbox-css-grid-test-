@@ -141,7 +141,7 @@ a {
     .flexnav > li{
         flex: 1 1 60%;
     }
-    .flexnav img {
+    .flexnav a{
         display: none;
     }
     .main-container {
