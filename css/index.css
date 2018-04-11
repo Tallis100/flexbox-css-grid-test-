@@ -116,7 +116,7 @@ html, body {
 /* Text Contents Design */
 article, aside {    
     color: white;
-    padding: 30px 30px;
+    padding: 30px;
     font-family: sans-serif;
 }
 article {
